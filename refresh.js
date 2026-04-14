@@ -1,4 +1,4 @@
-let server = location.href.split("?")[1];
-if (server != undefined && !location.href.endsWith("?")) {
-    location = "steam://connect/" + server;
+const server = location.search.slice(1);
+if (server) {
+    location.assign("steam://connect/" + server);
 } 
